@@ -35,9 +35,18 @@ process.
 ## Access your hubiC data
 
 Using options given within the previous step, you can for instance mount your default
-hubiC container with :
+hubiC container depending your system.
 
+Using UNIX system :
 ```
-sudo mount -t svfs -o hubic_auth=<hubic_auth>,hubic_token=<hubic_token>,container=default hubic /mountpoint
+sudo mount -t svfs -o hubic_auth=<hubic_auth>,hubic_token=<hubic_token>[,container=default] hubic /mountpoint
 ```
 
+Using OSX system :
+```
+mount_svfs hubic /mountpoint -o hubic_auth=<hubic_auth>,hubic_token=<hubic_token>[,container=default]
+```
+
+You can also access to your data using web app in other container than the default given using this format :
+
+* `https://hubic.com/home/browser/#containerName/`
