@@ -10,8 +10,9 @@ class TestIntegration < Test::Unit::TestCase
 
   def setup
     @mountpoint = ENV['TEST_MOUNTPOINT']
-    @old_name = "#{@mountpoint}/#{TEMP_PREFIX}.#{SecureRandom.hex}"
-    @new_name = "#{@mountpoint}/#{TEMP_PREFIX}.#{SecureRandom.hex}"
+    @container = ENV['TEST_CONTAINER']
+    @old_name = "#{@mountpoint}/#{@container}/#{TEMP_PREFIX}.#{SecureRandom.hex}"
+    @new_name = "#{@mountpoint}/#{@container}/#{TEMP_PREFIX}.#{SecureRandom.hex}"
   end
 
   # This test :

@@ -36,7 +36,8 @@ end
 # In order to run, the following env vars
 # must be set.
 #
-# TEST_MOUNTPOINT : an svfs mountpoint
+# TEST_MOUNTPOINT : an svfs mountpoint (without the slash at the end)
+# TEST_CONTAINER : the container you want to do tests. (must be created before).
 # TEST_SEG_SIZE   : segmented file size
 # TEST_NSEG_SIZE  : standard file size
 #
