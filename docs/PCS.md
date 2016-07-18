@@ -30,12 +30,12 @@ be available as environment variables, starting with prefix `OS_`.
 
 You can use them with svfs like this,
 
-Using UNIX system :
+Using linux :
 ```
 sudo mount -t svfs -o username=$OS_USERNAME,password=$OS_PASSWORD,tenant=$OS_TENANT_NAME,region=$OS_REGION_NAME pcs /mountpoint
 ```
 
-Using OSX system :
+Using OSX :
 ```
 mount_svfs pcs /mountpoint -o username=$OS_USERNAME,password=$OS_PASSWORD,tenant=$OS_TENANT_NAME,region=$OS_REGION_NAME
 ```
