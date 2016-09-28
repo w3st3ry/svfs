@@ -108,6 +108,14 @@
 			"notests": true
 		},
 		{
+			"importpath": "github.com/juju/ratelimit",
+			"repository": "https://github.com/juju/ratelimit",
+			"vcs": "git",
+			"revision": "77ed1c8a01217656d2080ad51981f6e99adaa177",
+			"branch": "master",
+			"notests": true
+		},
+		{
 			"importpath": "github.com/magiconair/properties",
 			"repository": "https://github.com/magiconair/properties",
 			"vcs": "git",
