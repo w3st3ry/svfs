@@ -7,7 +7,6 @@ import (
 	"time"
 
 	"bazil.org/fuse"
-
 	"github.com/xlucas/swift"
 )
 
@@ -18,7 +17,9 @@ func newReader(fh *ObjectHandle) (io.ReadSeeker, error) {
 
 func newWriter(container, path string) (io.WriteCloser, error) {
 	headers := map[string]string{"autoContent": "true"}
-	return SwiftConnection.ObjectCreate(container, path, false, "", "", headers)
+	writer, err := SwiftConnection.ObjectCreate(container, path, false, "", "", headers)
+	writer.ActiveRatelimit(1, Ratelimit)
+	return writer, err
 }
 
 func initSegment(c, prefix string, id *uint, t *swift.Object, d []byte, up *uint64) (io.WriteCloser, error) {
