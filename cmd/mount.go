@@ -187,6 +187,9 @@ func setFlags() {
 	flags.StringVar(&device, "device", "", "Device name")
 	flags.StringVar(&mountpoint, "mountpoint", "", "Mountpoint")
 
+	// Ratelimit
+	flags.Uint64Var(&svfs.Ratelimit, "ratelimit", 0, "Limit banwith in Mbps")
+
 	mountCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 
 	// Bind cobra flags to viper flags
