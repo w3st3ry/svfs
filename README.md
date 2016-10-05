@@ -123,6 +123,7 @@ Segment size should not exceed 5 GB.
  - `1` : disable explicit empty file creation.
  - `2` : disable explicit directory creation.
  - `4` : disable directory content check on removal.
+* `ratelimit`: Limit bandwidth in Mbps
 
 #### Cache options
 
@@ -155,7 +156,6 @@ usage. Setting a higher value will let the heap size grow by this percent withou
 reducing GC frequency. A Garbage collection is forced if none happened for 2 minutes. Note that
 unused heap memory is not reclaimed after collection, it is returned to the operating system
 only if it appears unused for 5 minutes.
-
 
 ## Limitations
 
