@@ -36,7 +36,6 @@ var (
 	HubicTimes bool
 	// SegmentSize is the size of a segment in bytes.
 	SegmentSize uint64
-
 	// AllowRoot represents FUSE allow_root option.
 	AllowRoot bool
 	// AllowOther represents FUSE allow_other option.
@@ -59,6 +58,8 @@ var (
 	// of flags. Each flag enables an optimization that can be used by storage
 	// synchronization processes in order to reduce network access.
 	TransferMode int
+	// Ratelimit represents the limit of write bandwidth that user want to set
+	Ratelimit uint64
 )
 
 // SVFS implements the Swift Virtual File System.
